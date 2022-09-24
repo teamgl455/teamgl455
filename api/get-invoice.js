@@ -8,6 +8,7 @@ export default function handler(req, res) {
       };
       
       fetch('https://invoice-generator.com/', options)
+        .then(response => response.blob())
         .then(response => res.send(response))  
         .catch(err => console.error(err));
 
