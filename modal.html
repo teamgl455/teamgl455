@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            a.navbar-item, a.navbar-link
+            {
+                color: white;
+            }
+
+            div.has-dropdown a.navbar-item
+            {
+                color: black;
+            }
+
+			div.section.event
+			{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 3rem 0;
+			}
+
+			div.event div.one,
+			div.event div.two
+			{
+				height: 50vh;
+				width: 100%;
+			}
+
+			div.event div.one 
+			{
+				background-color: red;
+				background-image: url(https://www.humanpractice.org/wp-content/uploads/2019/08/4P5A1419-600x400.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			div.event div.two
+			{
+				background-color: #763e98;
+				display: flex;
+				flex-direction: row;
+				color: white;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+			}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar" style="background-color: #763e98;" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="https://www.humanpractice.org/wp-content/uploads/2019/08/logo@3x.png" style="max-height: none;" width="112" height="28">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+          
+                <a class="navbar-item">
+                  Documentation
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                      About
+                    </a>
+                    <a class="navbar-item">
+                      Jobs
+                    </a>
+                    <a class="navbar-item">
+                      Contact
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                      Report an issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </nav>
+
+        <main class="container">
+
+			<div class="section event">
+                <div class="one"></div>
+				<div class="two">
+					<div class="detail">
+						<h2 class="is-4">CityLondon Annual Gala</h2>
+						<h3>CRM</h3>
+						<p>22nd September 2022</p>
+						<br><br>
+						<button class="button is-link js-modal-trigger" data-target="donation_modal">Donate </button>
+					</div>
+				</div>
+            </div>
+
+			<div class="content">
+				<h2>CityLondon Annual Gala</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iure? 
+					Temporibus illum sit sunt ratione voluptatum unde suscipit iusto autem mollitia neque cumque esse, ipsa itaque? 
+					Doloremque hic suscipit temporibus.
+				</p>
+			</div>
+            
+			<button class="button is-link js-modal-trigger" data-target="donation_modal">Donate </button>
+            
+        </main>
+        <footer class="footer">
+            <div class="content has-text-centered">
+              <p>
+                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+              </p>
+            </div>
+          </footer>
+
+        <div class="modal" id="donation_modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+              <form>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input type="text" class="input" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                      <input class="input" type="email" value="">
+                      
+                      <!-- <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                      </span> -->
+                    </div>
+                    <!-- <p class="help is-danger">This email is invalid</p> -->
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Address Line 1</label>
+                    <div class="control">
+                        <input type="text" class="input" />
+                    </div>
+                </div>
+
+                <label class="label">Donation Amount</label>
+                
+                <div class="columns">
+                  
+
+                  <div class="column is-three-fifths">
+                    <div class="field">
+                      <div class="control">
+                          <input type="number" class="input" />
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="column is-two-fifths">
+                    <div class="select">
+                      <select>
+                        <option value="USD" selected="selected">United States Dollars</option>
+                        <option value="EUR">Euro</option>
+                        <option value="GBP">United Kingdom Pounds</option>
+                        <option value="DZD">Algeria Dinars</option>
+                        <option value="ARP">Argentina Pesos</option>
+                        <option value="AUD">Australia Dollars</option>
+                        <option value="ATS">Austria Schillings</option>
+                        <option value="BSD">Bahamas Dollars</option>
+                        <option value="BBD">Barbados Dollars</option>
+                        <option value="BEF">Belgium Francs</option>
+                        <option value="BMD">Bermuda Dollars</option>
+                        <option value="BRR">Brazil Real</option>
+                        <option value="BGL">Bulgaria Lev</option>
+                        <option value="CAD">Canada Dollars</option>
+                        <option value="CLP">Chile Pesos</option>
+                        <option value="CNY">China Yuan Renmimbi</option>
+                        <option value="CYP">Cyprus Pounds</option>
+                        <option value="CSK">Czech Republic Koruna</option>
+                        <option value="DKK">Denmark Kroner</option>
+                        <option value="NLG">Dutch Guilders</option>
+                        <option value="XCD">Eastern Caribbean Dollars</option>
+                        <option value="EGP">Egypt Pounds</option>
+                        <option value="FJD">Fiji Dollars</option>
+                        <option value="FIM">Finland Markka</option>
+                        <option value="FRF">France Francs</option>
+                        <option value="DEM">Germany Deutsche Marks</option>
+                        <option value="XAU">Gold Ounces</option>
+                        <option value="GRD">Greece Drachmas</option>
+                        <option value="HKD">Hong Kong Dollars</option>
+                        <option value="HUF">Hungary Forint</option>
+                        <option value="ISK">Iceland Krona</option>
+                        <option value="INR">India Rupees</option>
+                        <option value="IDR">Indonesia Rupiah</option>
+                        <option value="IEP">Ireland Punt</option>
+                        <option value="ILS">Israel New Shekels</option>
+                        <option value="ITL">Italy Lira</option>
+                        <option value="JMD">Jamaica Dollars</option>
+                        <option value="JPY">Japan Yen</option>
+                        <option value="JOD">Jordan Dinar</option>
+                        <option value="KRW">Korea (South) Won</option>
+                        <option value="LBP">Lebanon Pounds</option>
+                        <option value="LUF">Luxembourg Francs</option>
+                        <option value="MYR">Malaysia Ringgit</option>
+                        <option value="MXP">Mexico Pesos</option>
+                        <option value="NLG">Netherlands Guilders</option>
+                        <option value="NZD">New Zealand Dollars</option>
+                        <option value="NOK">Norway Kroner</option>
+                        <option value="PKR">Pakistan Rupees</option>
+                        <option value="XPD">Palladium Ounces</option>
+                        <option value="PHP">Philippines Pesos</option>
+                        <option value="XPT">Platinum Ounces</option>
+                        <option value="PLZ">Poland Zloty</option>
+                        <option value="PTE">Portugal Escudo</option>
+                        <option value="ROL">Romania Leu</option>
+                        <option value="RUR">Russia Rubles</option>
+                        <option value="SAR">Saudi Arabia Riyal</option>
+                        <option value="XAG">Silver Ounces</option>
+                        <option value="SGD">Singapore Dollars</option>
+                        <option value="SKK">Slovakia Koruna</option>
+                        <option value="ZAR">South Africa Rand</option>
+                        <option value="KRW">South Korea Won</option>
+                        <option value="ESP">Spain Pesetas</option>
+                        <option value="XDR">Special Drawing Right (IMF)</option>
+                        <option value="SDD">Sudan Dinar</option>
+                        <option value="SEK">Sweden Krona</option>
+                        <option value="CHF">Switzerland Francs</option>
+                        <option value="TWD">Taiwan Dollars</option>
+                        <option value="THB">Thailand Baht</option>
+                        <option value="TTD">Trinidad and Tobago Dollars</option>
+                        <option value="TRL">Turkey Lira</option>
+                        <option value="VEB">Venezuela Bolivar</option>
+                        <option value="ZMK">Zambia Kwacha</option>
+                        <option value="EUR">Euro</option>
+                        <option value="XCD">Eastern Caribbean Dollars</option>
+                        <option value="XDR">Special Drawing Right (IMF)</option>
+                        <option value="XAG">Silver Ounces</option>
+                        <option value="XAU">Gold Ounces</option>
+                        <option value="XPD">Palladium Ounces</option>
+                        <option value="XPT">Platinum Ounces</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="select-wrap">
+                    <label class="label">Donation Country</label>
+                    <div class="select">
+                        <select>
+                        <option selected disabled>Select project</option>
+                        <option>Kenya</option>
+                        <option>Nepal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="select-wrap">
+                    <label class="label">Donation Project</label>
+                    <div class="select">
+                        <select>
+                        <option selected disabled>Select project</option>
+                        <option>Classrooms</option>
+                        <option>Dormitories</option>
+                        <option>Toilets</option>
+                        <option>Teacher Housing</option>
+                        <option>IT Hub</option>
+                        <option>Science Lab</option>
+                        <option>Playground</option>
+                        <option>Library</option>
+                        </select>
+                    </div>
+                </div>
+                
+				<div class="button-row" style="display: flex; flex-direction: column; align-items: flex-end;">
+					<button class="button is-link is-rounded">Submit</button>
+				</div>
+            </form>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => 
+            {
+                // Get all "navbar-burger" elements
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => 
+                {
+                    el.addEventListener('click', () => 
+                    {
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            });
+        </script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            // Functions to open and close a modal
+            function openModal($el) {
+              $el.classList.add('is-active');
+            }
+
+            function closeModal($el) {
+              $el.classList.remove('is-active');
+            }
+
+            function closeAllModals() {
+              (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                closeModal($modal);
+              });
+            }
+
+            // Add a click event on buttons to open a specific modal
+            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+              const modal = $trigger.dataset.target;
+              const $target = document.getElementById(modal);
+
+              $trigger.addEventListener('click', () => {
+                openModal($target);
+              });
+            });
+
+            // Add a click event on various child elements to close the parent modal
+            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+              const $target = $close.closest('.modal');
+
+              $close.addEventListener('click', () => {
+                closeModal($target);
+              });
+            });
+
+            // Add a keyboard event to close all modals
+            document.addEventListener('keydown', (event) => {
+              const e = event || window.event;
+
+              if (e.keyCode === 27) { // Escape key
+                closeAllModals();
+              }
+            });
+          });
+
+        </script>
+    </body>
+</html>
