@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 export default function handler(req, res) {
     const options = {
         method: 'POST',
