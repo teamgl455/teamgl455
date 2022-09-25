@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            .fitwidth
+            {
+                width: 1px; 
+                white-space: nowrap;
+            }
+
+            a.navbar-item, a.navbar-link
+            {
+                color: white;
+            }
+
+            div.has-dropdown a.navbar-item,
+			div.navbar-menu.is-active a.navbar-item,
+			div.navbar-menu.is-active a.navbar-link
+            {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar" style="background-color: #763e98;" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="https://www.humanpractice.org/wp-content/uploads/2019/08/logo@3x.png" style="max-height: none;" width="112" height="28">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+          
+                <a class="navbar-item">
+                  Documentation
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                      About
+                    </a>
+                    <a class="navbar-item">
+                      Jobs
+                    </a>
+                    <a class="navbar-item">
+                      Contact
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                      Report an issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </nav>
+
+        <!--<section class="hero">
+            <div class="hero-body">
+                <!-- <img src="https://www.humanpractice.org/wp-content/uploads/2021/08/topbanner_kontrast_crop2.jpg"/> -->
+                <!--img src="https://www.humanpractice.org/wp-content/uploads/2021/06/Kiorione-Children-raising-hands-Kenya-scaled-e1624626106526-1200x976.jpg" />-->
+            <!--</div>
+        </section>-->
+
+        <main class="container">
+            
+            <h2 class="title mt-5 has-text-centered">Dashboard</h2>
+
+            <div class="section" style="padding: 1.5rem;">
+                <h2 class="subtitle has-text-centered">Fundraisers</h2>
+                <table class="table is-bordered is-striped is-fullwidth">
+                    <tr>
+                        <th class="fitwidth">ID</th>
+                        <th>Event</th>
+                        <th class="fitwidth">Action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>LondonCity Annual Gala</td>
+                        <td><button class="button is-primary js-modal-trigger" data-target="fundraiser_modal">Edit</button></td>
+                    </tr>
+                </table>
+
+                <h2 class="subtitle has-text-centered">Pledges</h2>
+                <table class="table is-bordered is-striped is-fullwidth">
+                    <tr>
+                        <th class="fitwidth">ID</th>
+                        <th style="width: 100%;">Name</th>
+                        <th style="min-width: 13em;">Action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Carolynn Industries</td>
+                        <td>
+                            <button class="button is-primary invoice">Invoice</button>
+                            <button class="button is-danger">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Anonymous</td>
+                        <td>
+                            <button class="button is-primary invoice">Invoice</button>
+                            <button class="button is-danger">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>HPF</strong> by <a href="https://gl455.com">gl455</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+        </footer>
+
+        <div class="modal" id="fundraiser_modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <div class="box">
+                <form>
+                  <div class="field">
+                      <label class="label">Name</label>
+                      <div class="control">
+                          <input type="text" class="input" />
+                      </div>
+                  </div>
+  
+                  <div class="field">
+                      <label class="label">Donation Country</label>
+                      <div class="control">
+                        <input class="input" type="text" multiple />
+                      </div>
+                  </div>
+  
+                  <div class="field">
+                      <label class="label">Donation Project</label>
+                      <div class="control">
+                        <input class="input" type="text" multiple />
+                      </div>
+                  </div>
+                  
+                  <div class="button-row" style="display: flex; flex-direction: column; align-items: flex-end;">
+                      <button class="button is-link is-rounded">Submit</button>
+                  </div>
+              </form>
+              </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+
+        <script src="js/navbar.js"></script>
+        <script>
+            const download = (path, filename) => {
+                // Create a new link
+                const anchor = document.createElement('a');
+                anchor.href = path;
+                anchor.download = filename;
+
+                // Append to the DOM
+                document.body.appendChild(anchor);
+
+                // Trigger `click` event
+                anchor.click();
+
+                // Remove element from DOM
+                document.body.removeChild(anchor);
+            }; 
+
+            const invoice = document.querySelectorAll(".invoice");
+            for(i = 0; i < invoice.length; i++)
+            {
+                invoice[i].addEventListener('click', function() 
+                {
+                    download('assets/invoice.pdf', 'invoice.pdf');
+                });
+            }
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functions to open and close a modal
+            function openModal($el) {
+            $el.classList.add('is-active');
+            }
+
+            function closeModal($el) {
+            $el.classList.remove('is-active');
+            }
+
+            function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                closeModal($modal);
+            });
+            }
+
+            // Add a click event on buttons to open a specific modal
+            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+            $trigger.addEventListener('click', () => {
+                openModal($target);
+            });
+            });
+
+            // Add a click event on various child elements to close the parent modal
+            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+                closeModal($target);
+            });
+            });
+
+            // Add a keyboard event to close all modals
+            document.addEventListener('keydown', (event) => {
+            const e = event || window.event;
+
+            if (e.keyCode === 27) { // Escape key
+                closeAllModals();
+            }
+            });
+        });
+
+        </script>
+    </body>
+</html>
