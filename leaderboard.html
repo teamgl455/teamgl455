@@ -7,9 +7,76 @@
         <title>Test Page</title>
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            body
+            {
+                display: block;
+            }
+
+            footer
+            {
+                margin-top: 2rem;
+            }
+
+            a.navbar-item, a.navbar-link
+            {
+                color: white;
+            }
+
+            div.has-dropdown a.navbar-item,
+            div.navbar-menu.is-active a.navbar-item,
+            div.navbar-menu.is-active a.navbar-link
+            {
+                color: black;
+            }
+        </style>
     </head>
     <body>
-        <main class="container">
+        <nav class="navbar" style="background-color: #763e98;" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="https://www.humanpractice.org/wp-content/uploads/2019/08/logo@3x.png" style="max-height: none;" width="112" height="28">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                      About
+                    </a>
+                    <a class="navbar-item">
+                      Jobs
+                    </a>
+                    <a class="navbar-item">
+                      Contact
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                      Report an issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </nav>
+        <main class="section">
             <section class="hero is-primary">
                 <div class="hero-body">
                     <p class="title">
@@ -62,8 +129,18 @@
                         <span class="text t4 nConfirm4">£100,000</span>
                     </div>
                 </div>
+                <div style="height: 2em;"></div>
             </body>
         </main>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>HPF</strong> by <a href="https://gl455.com">gl455</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+        </footer>
         <script language="JavaScript" type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script language="JavaScript" type="text/javascript" src="js/custom.js"></script>
     </body>
