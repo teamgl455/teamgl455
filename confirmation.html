@@ -6,6 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Test Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            a.navbar-item, a.navbar-link
+            {
+                color: white;
+            }
+
+            div.has-dropdown a.navbar-item,
+			div.navbar-menu.is-active a.navbar-item,
+			div.navbar-menu.is-active a.navbar-link
+            {
+                color: black;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar" style="background-color: #763e98;" role="navigation" aria-label="main navigation">

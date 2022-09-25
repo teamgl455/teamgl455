@@ -7,12 +7,27 @@
         <title>Test Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <style>
+            .mha
+            {
+                padding: 0;
+                /*display: flex;
+                justify-content: stretch;*/
+                align-items: center;
+                background-image: url(https://www.humanpractice.org/wp-content/uploads/2021/06/Kiorione-Children-raising-hands-Kenya-scaled-e1624626106526-1200x976.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                min-height: 68vh;
+            }
+
             a.navbar-item, a.navbar-link
             {
                 color: white;
             }
 
-            div.has-dropdown a.navbar-item
+            div.has-dropdown a.navbar-item,
+			div.navbar-menu.is-active a.navbar-item,
+			div.navbar-menu.is-active a.navbar-link
             {
                 color: black;
             }
@@ -75,36 +90,17 @@
             <!--</div>
         </section>-->
 
-        <div class="hero-body" style="
-            padding: 0;
-            display: flex;
-            justify-content: stretch;
-            align-items: center;
-            background-image: url(https://www.humanpractice.org/wp-content/uploads/2021/06/Kiorione-Children-raising-hands-Kenya-scaled-e1624626106526-1200x976.jpg);;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            min-height: 68vh;">
+        <div class="hero-body mha">
                 <!-- <img src="https://www.humanpractice.org/wp-content/uploads/2021/08/topbanner_kontrast_crop2.jpg"/> -->
                 
-            <div>
+            <!--<div>
                 <p>A new way to change</p>
-            </div>
+            </div>-->
         </div>
 
         <main class="container">
             
-            <div class="content">
-                <br>
-                <h2 class="has-text-centered">Our ongoing projects</h2>
-
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Dolor harum beatae enim fuga, doloribus accusamus in sed maxime! 
-                    Officiis aperiam dolorum a quisquam deserunt similique fugit rem consectetur natus nostrum.
-                </p>
-
-                
-            </div>
+            <h2 class="title mt-5 has-text-centered">Our Ongoing Projects</h2>
 
             <div class="section">
                 
