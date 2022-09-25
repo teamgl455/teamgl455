@@ -37,7 +37,8 @@
 			div.event div.one 
 			{
 				background-color: red;
-				background-image: url(https://www.humanpractice.org/wp-content/uploads/2019/08/4P5A1419-600x400.jpg);
+				/*background-image: url(https://www.humanpractice.org/wp-content/uploads/2019/08/4P5A1419-600x400.jpg);*/
+				background-image: url(images/gala.jpg);
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
@@ -137,9 +138,28 @@
 					Phasellus vitae pulvinar risus. Pellentesque erat libero, sodales eget dapibus eu, vestibulum ac quam. Nam quis eros sem. Aenean suscipit magna sed blandit consectetur. 
 					Interdum et malesuada fames ac ante ipsum primis in faucibus. 
 				</p>
+
+				<br><br>
+
+				<div class="tile is-ancestor">
+					<div class="tile is-4 is-vertical is-parent">
+					  <div class="tile is-child box">
+						<img src="https://www.humanpractice.org/wp-content/uploads/2021/08/topbanner_kontrast_crop2.jpg" />
+					  </div>
+					  <div class="tile is-child box">
+						<img src="https://www.humanpractice.org/wp-content/uploads/2021/11/maritati.jpg" />
+
+					  </div>
+					</div>
+					<div class="tile is-parent">
+					  <div class="tile is-child box">
+						<img src="https://www.humanpractice.org/wp-content/uploads/2019/08/4P5A1419-600x400.jpg" />
+					  </div>
+					</div>
+				  </div>
 			</div>
             
-			<button class="button is-link js-modal-trigger" data-target="donation_modal">Donate </button>
+			<!-- <button class="button is-link js-modal-trigger" data-target="donation_modal">Donate </button> -->
             
         </main>
         <footer class="footer">
@@ -317,7 +337,7 @@
                 </div>
                 
 				<div class="button-row" style="display: flex; flex-direction: column; align-items: flex-end;">
-					<button class="button is-link is-rounded">Submit</button>
+					<button class="button is-link is-rounded" type="button" id="submit">Submit</button>
 				</div>
             </form>
             </div>
@@ -325,27 +345,14 @@
           <button class="modal-close is-large" aria-label="close"></button>
         </div>
 
+		<script src="js/navbar.js"></script>
+
         <script>
-            document.addEventListener('DOMContentLoaded', () => 
-            {
-                // Get all "navbar-burger" elements
-                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+			const submitBtn = document.getElementById("submit");
 
-                // Add a click event on each of them
-                $navbarBurgers.forEach( el => 
-                {
-                    el.addEventListener('click', () => 
-                    {
-                        // Get the target from the "data-target" attribute
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
-                });
-            });
+			submitBtn.onclick = function () {
+				window.location.href = "confirmation.html";
+			};
         </script>
 
         <script>
