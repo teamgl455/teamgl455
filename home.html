@@ -105,7 +105,7 @@
             <div class="section">
                 
             <div class="columns">
-                <div class="column is-one-third">
+                <div class="column is-one-third mlinks">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-				<div class="column is-one-third">
+				<div class="column is-one-third mlinks">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                 </div>
-				<div class="column is-one-third">
+				<div class="column is-one-third mlinks">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -206,6 +206,14 @@
                     });
                 });
             });
+
+            const modals = document.querySelectorAll(".mlinks");
+            for(i = 0; i < modals.length; i++)
+            {
+                modals[i].addEventListener('click', function() {
+                    window.location.href = "modal.html";
+                });
+            }
         </script>
     </body>
 </html>
